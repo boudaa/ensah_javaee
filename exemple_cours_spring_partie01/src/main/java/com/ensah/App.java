@@ -26,6 +26,8 @@ public class App {
 		
 		System.out.println(" ======Test 3====== ");
 		bean3.test();
+		
+		context.close();
 
 	}
 }
