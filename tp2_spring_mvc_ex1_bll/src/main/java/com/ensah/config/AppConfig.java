@@ -31,7 +31,6 @@ import com.ensah.core.bo.Person;
 @EnableTransactionManagement
 public class AppConfig implements WebMvcConfigurer {
 	
-
 	private static final Logger LOGGER = Logger.getLogger(AppConfig.class);
 
 	public AppConfig() {
