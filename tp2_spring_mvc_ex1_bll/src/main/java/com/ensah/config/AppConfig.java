@@ -30,6 +30,7 @@ import com.ensah.core.bo.Person;
 @ComponentScan(basePackages = { "com.ensah.core" })
 @EnableTransactionManagement
 public class AppConfig implements WebMvcConfigurer {
+	
 
 	private static final Logger LOGGER = Logger.getLogger(AppConfig.class);
 
