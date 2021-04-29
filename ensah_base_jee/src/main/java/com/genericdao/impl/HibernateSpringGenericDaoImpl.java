@@ -108,9 +108,10 @@ public abstract class HibernateSpringGenericDaoImpl<T, PK extends Serializable> 
 	}
 
 	public List<T> getEntityByColValue(String ClassName, String pColumnName, String pValue) {
+		System.out.println("getEntityByColValue hibernateTemplate = "+hibernateTemplate);
 
 		// Une requete HQL simple pour faire la selection
-		String HqlQuery = "from " + ClassName + " where " + pColumnName + " = ?";
+		String HqlQuery = "from " + ClassName + " where " + pColumnName + " = ?0";
 
 		List l = hibernateTemplate.find(HqlQuery, pValue);
 

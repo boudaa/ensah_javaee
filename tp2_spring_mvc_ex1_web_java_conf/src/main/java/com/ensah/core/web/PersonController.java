@@ -36,7 +36,16 @@ public class PersonController {
 	}
 
 
-	@RequestMapping("/showForm")
+	@RequestMapping("/")
+	public String index(Model model) {
+
+		model.addAttribute("personModel", new Person());
+		model.addAttribute("countryList", countryList);
+		model.addAttribute("personList", personService.getAllPersons());
+		return "form";
+	}
+	
+	@RequestMapping("/user/showForm")
 	public String showForm(Model model) {
 
 		model.addAttribute("personModel", new Person());
@@ -45,7 +54,7 @@ public class PersonController {
 		return "form";
 	}
 
-	@RequestMapping(value = "/updatePersonForm/{idPerson}", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/updatePersonForm/{idPerson}", method = RequestMethod.GET)
 	public String updatePersonForm(@PathVariable int idPerson, Model model) {
 
 		model.addAttribute("personModel", personService.getPersonById(Long.valueOf(idPerson)));
@@ -54,7 +63,7 @@ public class PersonController {
 		return "updateForm";
 	}
 
-	@RequestMapping("/updatePerson")
+	@RequestMapping("/admin/updatePerson")
 	public String updatePerson(@Valid @ModelAttribute("personModel") Person person, BindingResult bindingResult,
 			Model model) {
 
@@ -70,7 +79,7 @@ public class PersonController {
 		return "redirect:/managePersons";
 	}
 
-	@RequestMapping("/addPerson")
+	@RequestMapping("/admin/addPerson")
 	public String process(@Valid @ModelAttribute("personModel") Person person, BindingResult bindingResult,
 			Model model) {
 
@@ -88,7 +97,7 @@ public class PersonController {
 
 
 
-	@RequestMapping("/managePersons")
+	@RequestMapping("/admin/managePersons")
 	public String managePersons(Model model) {
 
 		model.addAttribute("personList", personService.getAllPersons());
@@ -96,7 +105,7 @@ public class PersonController {
 		return "listPersons";
 	}
 
-	@RequestMapping(value = "/deletePerson/{idPerson}", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/deletePerson/{idPerson}", method = RequestMethod.GET)
 	public String delete(@PathVariable int idPerson) {
 
 		personService.deletePerson(Long.valueOf(idPerson));

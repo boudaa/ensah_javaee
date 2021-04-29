@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                                        
+                                            
+    
     
     
     
@@ -9,7 +10,8 @@
     
     
     <wb-module deploy-name="tp2_spring_mvc_ex1_web_java_conf-0.0.1-SNAPSHOT">
-                                                                                
+                                                                                        
+        
         
         
         
@@ -19,7 +21,8 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                                                                
+                                                                                        
+        
         
         
         
@@ -29,7 +32,8 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                                                                
+                                                                                        
+        
         
         
         
@@ -39,7 +43,8 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                                                                                
+                                                                                        
+        
         
         
         
@@ -49,7 +54,8 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                                                                
+                                                                                        
+        
         
         
         
@@ -59,25 +65,14 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
-                        
-        
-        <dependent-module archiveName="tp2_spring_mvc_ex1_bll-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tp2_spring_mvc_ex1_bll/tp2_spring_mvc_ex1_bll">
-                                    
-            
+        <dependent-module archiveName="tp2_spring_mvc_ex1_bll_v2-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tp2_spring_mvc_ex1_bll_v2/tp2_spring_mvc_ex1_bll_v2">
             <dependency-type>uses</dependency-type>
-                                
-        
         </dependent-module>
-                        
-        
         <dependent-module archiveName="ensah_base_jee-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ensah_base_jee/ensah_base_jee">
-                                    
-            
             <dependency-type>uses</dependency-type>
-                                
-        
         </dependent-module>
-                                                                                
+                                                                                        
+        
         
         
         
@@ -87,8 +82,10 @@
         
         
         <property name="java-output-path" value="/tp2_spring_mvc_ex1_web___/target/classes"/>
+                
         <property name="context-root" value="tp2_spring_mvc_ex1_web_java_conf"/>
-                                                                            
+                                                                                    
+    
     
     
     
@@ -98,7 +95,8 @@
     
     
     </wb-module>
-                                    
+                                        
+
 
 
 

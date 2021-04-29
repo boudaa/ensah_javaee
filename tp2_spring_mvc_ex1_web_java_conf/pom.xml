@@ -16,7 +16,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.ensah</groupId>
-			<artifactId>tp2_spring_mvc_ex1_bll</artifactId>
+			<artifactId>tp2_spring_mvc_ex1_bll_v2</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
