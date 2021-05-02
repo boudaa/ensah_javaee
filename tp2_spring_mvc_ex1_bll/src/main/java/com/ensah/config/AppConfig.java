@@ -130,6 +130,7 @@ public class AppConfig implements WebMvcConfigurer {
 		final HibernateTransactionManager txManager = new HibernateTransactionManager();
 		txManager.setSessionFactory(sessionFactory);
 
+		System.out.println("Transaction Manager created");
 		if (txManager != null) {
 			LOGGER.debug(" Hibernate Transaction Manager created ...");
 
