@@ -47,7 +47,7 @@ public class AppConfig implements WebMvcConfigurer {
 	public ViewResolver internalResourceViewResolver() {
 		InternalResourceViewResolver bean = new InternalResourceViewResolver();
 		bean.setViewClass(JstlView.class);
-		bean.setPrefix("/WEB-INF/view/persons/");
+		bean.setPrefix("/WEB-INF/view/");
 		bean.setSuffix(".jsp");
 		return bean;
 	}
@@ -99,7 +99,7 @@ public class AppConfig implements WebMvcConfigurer {
 
 		final Properties hibernateProperties = new Properties();
 
-		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
+		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");
 		hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MariaDB53Dialect");
 		hibernateProperties.setProperty("hibernate.show_sql", "true");
 
