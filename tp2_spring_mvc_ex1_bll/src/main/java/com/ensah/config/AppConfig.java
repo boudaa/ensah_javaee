@@ -31,8 +31,6 @@ import com.ensah.core.bo.Person;
 public class AppConfig implements WebMvcConfigurer {
 
 	private Logger LOGGER = Logger.getLogger(getClass().getName());
-	
-	
 
 	public AppConfig() {
 
@@ -40,8 +38,6 @@ public class AppConfig implements WebMvcConfigurer {
 
 		LOGGER.debug(" configuration init...");
 	}
-
-	
 
 	@Bean
 	public ViewResolver internalResourceViewResolver() {
@@ -52,14 +48,7 @@ public class AppConfig implements WebMvcConfigurer {
 		return bean;
 	}
 
-	
-	
 	// define a bean for our security datasource
-	
-
-
-	
-
 
 	@Bean
 	@Autowired
@@ -95,9 +84,9 @@ public class AppConfig implements WebMvcConfigurer {
 		return sessionFactory;
 	}
 
-	final Properties hibernateProperties() {
+	public Properties hibernateProperties() {
 
-		final Properties hibernateProperties = new Properties();
+		Properties hibernateProperties = new Properties();
 
 		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");
 		hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MariaDB53Dialect");
@@ -130,6 +119,7 @@ public class AppConfig implements WebMvcConfigurer {
 		final HibernateTransactionManager txManager = new HibernateTransactionManager();
 		txManager.setSessionFactory(sessionFactory);
 
+		System.out.println("Transaction Manager created");
 		if (txManager != null) {
 			LOGGER.debug(" Hibernate Transaction Manager created ...");
 
